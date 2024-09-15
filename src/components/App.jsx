@@ -3,23 +3,23 @@ import { useState, useEffect } from 'react';
 import TitleSection from './TitleSection/TitleSection';
 import ContactForm from './ContactForm/ContactForm';
 import { TITLE } from '../js/constants';
-import { getContactsList } from '../js/localstorage/getContactsList';
-import { saveContactsList } from '../js/localstorage/saveContactsList';
+import { getContactList } from '../js/localstorage/getContactsList';
+import { saveContactList } from '../js/localstorage/saveContactsList';
 import styles from './App.module.css';
 
 function App() {
-  const [contacts, setContacts] = useState(getContactsList);
+  const [contact, setContact] = useState(getContactList);
 
   const handleAddContact = newContact => {
-    setContacts(prevContacts => [
-      ...prevContacts,
+    setContact(prevContact => [
+      ...prevContact,
       { ...newContact, id: nanoid() },
     ]);
   };
 
   useEffect(() => {
-    saveContactsList(contacts);
-  }, [contacts]);
+    saveContactList(contact);
+  }, [contact]);
 
   return (
     <div className={styles.container}>
