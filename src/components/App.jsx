@@ -1,9 +1,11 @@
 import React from 'react';
+import TitleSection from './TitleSection/TitleSection';
+import { TITLE } from '../js/constants';
 
 function App() {
   return (
     <React.Fragment>
-      <p >Home 3</p>
+      <TitleSection>{TITLE}</TitleSection>
     </React.Fragment>
   );
 }
