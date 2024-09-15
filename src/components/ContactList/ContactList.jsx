@@ -2,7 +2,7 @@ import styles from './ContactList.module.css';
 import ContactItem from '../ContactItem/ContactItem';
 
 const ContactList = ({ contacts, onDeleteContact }) => {
-    if (contacts.length === 0) return;
+  if (contacts.length === 0) return;
   return (
     <ul className={styles.contact}>
       {contacts.map(contact => (

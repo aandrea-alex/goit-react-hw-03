@@ -1,13 +1,9 @@
 import { useId } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import { INITIAL_CONTACT } from '../../js/constants'; 
+import { INITIAL_CONTACT } from '../../js/constants';
 import { FeedbackSchema } from '../../js/schema';
-import {
-  LABEL_NAME,
-  LABEL_PHONE,
-  CAPTION_ADD,
-} from '../../js/constants';
+import { LABEL_NAME, LABEL_PHONE, CAPTION_ADD } from '../../js/constants';
 
 import CustomButton from '../CustomButton/CustomButton';
 import styles from './ContactForm.module.css';

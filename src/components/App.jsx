@@ -21,9 +21,7 @@ function App() {
   };
 
   const handleDeleteContact = id => {
-    setContact(prevContact =>
-      prevContact.filter(contact => contact.id !== id)
-    );
+    setContact(prevContact => prevContact.filter(contact => contact.id !== id));
   };
 
   const handleChangeSearch = event => {
